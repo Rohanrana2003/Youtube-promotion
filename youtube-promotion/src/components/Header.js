@@ -10,10 +10,11 @@ import { headerItems } from '../utils/constantData';
 const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectToAuth }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [showMenu, setShowMenu] = useState(true);
   const [showHeader, setShowHeader] = useContext(MyContext);
   const [selectedItem, setSelectedItem] = useContext(MyContext);
   const navigate = useNavigate(); // Use React Routser's useNavigate for redirecting
-  const location = useLocation(); 
+  const location = useLocation();
   // const headerItems = [
   //   { id: 1, label: 'Faq' },
   //   { id: 2, label: 'About' },
@@ -85,23 +86,23 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
     setShowHeader(true); // Add header background
   };
 
-  const handleLogin = () =>{
+  const handleLogin = () => {
     setShowHeader(false); //Remove header background
     redirectToAuth();
   }
 
   return (
-    <header className={`px-6 py-2 z-30 fixed w-full transition-all duration-300 ease-in-out text-white flex justify-between items-center ${showHeader ? 'bg-zinc-900 shadow-header-shadow shadow-black' : 'bg-transparent'}`}>
+    <header className={`px-6 py-2 z-30 fixed w-screen transition-all duration-300 ease-in-out text-white flex justify-between items-center ${showHeader ? 'bg-zinc-900 shadow-header-shadow shadow-black' : 'bg-transparent'}`}>
 
-      <div className='flex items-center justify-between gap-12'>
+      <div className='flex items-center justify-between gap-8 md:gap-12'>
         {/* Logo and Main Heading */}
         <div className="flex items-center">
-          <img onClick={handleLogoClick} src={logo} alt="Logo" className="h-14 cursor-pointer" />
-          <h1 onClick={handleLogoClick} className="ml-4 text-[#D88B0F] text-3xl font-[700] cursor-pointer">YouTube <span className='text-white'>Promotion</span></h1>
+          <img onClick={handleLogoClick} src={logo} alt="Logo" className="max-sm:h-16 h-14 cursor-pointer" />
+          <h1 onClick={handleLogoClick} className="ml-4 text-[#D88B0F] max-sm:w-10 max-sm:text-[25px] text-3xl font-[700] cursor-pointer max-md:leading-[25px]">YouTube <span className='text-white'>Promotion</span></h1>
         </div>
 
         {/* Header buttons */}
-        <div className='flex gap-10 mt-[5px]'>
+        <div className='flex md:gap-8 mt-[5px] max-md:hidden'>
 
           {
             headerItems.map((item) => (
@@ -118,13 +119,38 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
         </div>
       </div>
 
-      {/* Home page Login button  */}
+      {/* Mobile Side bar */}
+
+      <div className={`absolute top-0 left-0 flex flex-col  mt-[5px] bg-[#18181B] h-screen w-[300px] md:hidden ${showMenu ? 'hidden' : 'close'}`}>
+        <img onClick={handleLogoClick} src={logo} alt="Logo" className="h-32 w-32 m-5 mb-10 cursor-pointer" />
+        {
+          headerItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => handleButtonClick(item)}
+              className={`bg-slate-900 my-2 py-3 text-lg  ${selectedItem === item.id ? "text-[#DB880F]" : "text-white"}`}
+            >
+              {item.label}
+            </button>
+          ))
+        }
+      </div>
+
+
+      {/* Login button  */}
       {
         !user && showButton && showHeader &&
-        <button onClick={handleLogin} 
-            className=' bg-[#D88B0F] font-bold text-[21px] transition-all ease-in duration-100 hover:scale-[.96] absolute right-7 top-4  px-7 py-1  hover:shadow-none  shadow-black shadow-custom text-[#27272A]'>
-            Login</button>
+        <button onClick={handleLogin}
+          className=' bg-[#D88B0F] max-md:hidden font-bold text-[21px] transition-all ease-in duration-100 hover:scale-[.96] absolute right-7 top-4  px-7 py-1  hover:shadow-none  shadow-black shadow-custom text-[#27272A]'>
+          Login</button>
       }
+
+      {/* Hamburger Button */}
+      <div>
+        {showMenu ? <img className='w-8 absolute right-8 top-6 cursor-pointer md:hidden' onClick={() => setShowMenu(false)} src={require('../images/menu-open.png')} alt='' />
+          : <img className='w-6 absolute right-8 top-6 cursor-pointer md:hidden' onClick={() => setShowMenu(true)} src={require('../images/menu-close.png')} alt='' />}
+      </div>
+
 
       {/* Form page Drop-down */}
       <div className="flex items-center">

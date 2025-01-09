@@ -11,34 +11,34 @@ const Main = ({ redirectToAuth }) => {
     }, []) 
 
     return (
-        <div className=" pt-28 z-50">
+        <div className=" pt-28 z-50 w-full">
 
-            <section className='h-[90vh] flex flex-col items-center'>
+            <section className=' w-full flex flex-col items-center pb-20'>
 
                 {/* Black transparent Background  */}
-                <div className='fixed top-0 h-screen object-cover w-[100%]  bg-black opacity-55 -z-10' ></div>
+                <div className='fixed top-0 h-full object-cover w-screen  bg-black opacity-55 -z-10' ></div>
 
                 {/* Background Image  */}
-                <div className="top-0 fixed h-[100vh]  -z-20">
-                    <img className='h-screen w-screen after:absolute after:content-[""] after:w-[100vw] after:h-[100vh] after:bg-black object-cover' src={require('../images/background.jpg')} alt='bg' />
-                </div>
+                    <img className='top-0 fixed h-[100vh] w-screen  -z-20  after:absolute after:content-[""] after:w-[100vw] after:h-[100vh] after:bg-black object-cover' src={require('../images/background.jpg')} alt='bg' />
 
                 <div className="flex items-center justify-center flex-col">
 
-                    <div className='flex flex-col items-center py-5 mb-7 '>
-                        <h1 className="text-5xl font-normal px-4 my-4 mb-7 text-white text-center">Welcome to <a href='https://www.younedia.com/' target='_blank' rel='noreferrer'>
+                    <div className='flex flex-col items-center py-5 mb-7  max-md:gap-5'>
+                        <h1 className="max-md:text-4xl text-5xl font-normal px-4 my-4 mb-7 text-white text-center">Welcome to <a href='https://www.younedia.com/' target='_blank' rel='noreferrer'>
                             <span className='relative text-[#D88B0F] z-10  hover:text-white'>YOUNEDIA
                                 <img className='absolute right-2' src={require('../images/underline-black.png')} alt='' />
                             </span></a>
                         </h1>
-                        <p className=" text-center leading-[60px] font-medium text-5xl mb-5 text-neutral-300">PROMOTE YOUR <span className='text-[#fff]'>YOUTUBE</span> VIDEO TO <br /> MILLIONS!</p>
+
+                        <p className="max-sm:text-3xl max-md:text-4xl md:w-[700px] lg:w-[810px] max-md:mx-10 text-center leading-[60px] font-medium text-5xl -mb-3 md:mb-5 text-neutral-300">PROMOTE YOUR <span className='text-[#fff]'>YOUTUBE</span> VIDEO TO MILLIONS!</p>
+
                         <p className="text-lg font-light w-full text-center px-10 text-white">Make your <span className='text-[#d88b0f]'>Views</span> and
                             <span className='text-[#d88b0f]'> Likes</span>  skyrocket with our Professional Promotion strategies.</p>
                     </div>
 
                     <button onClick={redirectToAuth}
-                        className=' flex group items-center gap-3 pr-10 bg-[#c47e0e] hover:bg-opacity-85 text-2xl font-medium text-[#f3f3f3] py-[13px] px-[30px] rounded-[5px] shadow-md shadow-black hover:shadow-none '>Start Promotion 
-                        <img className='w-[33px] group-hover:translate-x-5 transition duration-500' src={require('../images/rightArrow.png')} alt='' /></button>
+                        className=' flex group items-center gap-3 pr-10 bg-[#c47e0e] hover:bg-opacity-85 max-md:text-xl text-2xl font-medium text-[#f3f3f3] max-md:py-[9px] py-[13px] max-md:px-[15px] px-[30px] rounded-[5px] shadow-md shadow-black hover:shadow-none '>Start Promotion 
+                        <img className='max-md:w-[25px] w-[33px] group-hover:translate-x-5 transition duration-500' src={require('../images/rightArrow.png')} alt='' /></button>
 
                 </div>
 
@@ -51,11 +51,11 @@ const Main = ({ redirectToAuth }) => {
             </section>
 
             <section>
-                <AdShow />
+                {/* <AdShow /> */}
             </section>
 
             <section>
-                <WhyChoose />
+                {/* <WhyChoose /> */}
             </section>
 
             <section>
