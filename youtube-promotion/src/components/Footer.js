@@ -53,7 +53,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright Section */}
-      <div className="mt-8 flex w-full justify-center gap-2x` items-center">
+      <div className="mt-8 flex w-full justify-center gap-2 items-center ">
         <img className='h-10' src={require('../images/younedia.png')} alt='younedia'/>
         <span>&copy; {new Date().getFullYear()} YOUNEDIA All Rights Reserved.</span>
       </div>

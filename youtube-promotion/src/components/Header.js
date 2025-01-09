@@ -93,13 +93,13 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
   }
 
   return (
-    <header className={`px-6 py-2 z-30 fixed w-screen transition-all duration-300 ease-in-out text-white flex justify-between items-center ${showHeader ? 'bg-zinc-900 shadow-header-shadow shadow-black' : 'bg-transparent'}`}>
+    <header className={`px-6 py-2 max-md:py-3 z-30 fixed w-screen transition-all duration-300 ease-in-out text-white flex justify-between items-center ${showHeader ? 'bg-zinc-900 shadow-header-shadow shadow-black' : 'bg-transparent'}`}>
 
       <div className='flex items-center justify-between gap-8 md:gap-12'>
         {/* Logo and Main Heading */}
         <div className="flex items-center">
           <img onClick={handleLogoClick} src={logo} alt="Logo" className="max-sm:h-16 h-14 cursor-pointer" />
-          <h1 onClick={handleLogoClick} className="ml-4 text-[#D88B0F] max-sm:w-10 max-sm:text-[25px] text-3xl font-[700] cursor-pointer max-md:leading-[25px]">YouTube <span className='text-white'>Promotion</span></h1>
+          <h1 onClick={handleLogoClick} className="ml-4 max-md:ml-1 text-[#D88B0F] max-sm:w-10 max-sm:text-[22px] text-3xl font-[600] cursor-pointer max-md:leading-[25px]">YouTube <span className='text-white'>Promotion</span></h1>
         </div>
 
         {/* Header buttons */}

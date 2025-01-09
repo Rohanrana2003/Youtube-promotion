@@ -19,12 +19,12 @@ const Main = ({ redirectToAuth }) => {
                 <div className='fixed top-0 h-full object-cover w-screen  bg-black opacity-55 -z-10' ></div>
 
                 {/* Background Image  */}
-                    <img className='top-0 fixed h-[100vh] w-screen  -z-20  after:absolute after:content-[""] after:w-[100vw] after:h-[100vh] after:bg-black object-cover' src={require('../images/background.jpg')} alt='bg' />
+                    <img className='top-0 fixed h-[100vh] w-screen -z-20  after:absolute after:content-[""] after:w-[100vw] after:h-[100vh] after:bg-black object-cover' src={require('../images/background.jpg')} alt='bg' />
 
                 <div className="flex items-center justify-center flex-col">
 
-                    <div className='flex flex-col items-center py-5 mb-7  max-md:gap-5'>
-                        <h1 className="max-md:text-4xl text-5xl font-normal px-4 my-4 mb-7 text-white text-center">Welcome to <a href='https://www.younedia.com/' target='_blank' rel='noreferrer'>
+                    <div className='flex flex-col items-center py-5 mb-7  max-md:gap-10'>
+                        <h1 className="max-md:text-[40px] text-5xl max-md:my-10 font-normal px-4 my-4 mb-7 text-white text-center">Welcome to <a href='https://www.younedia.com/' target='_blank' rel='noreferrer'>
                             <span className='relative text-[#D88B0F] z-10  hover:text-white'>YOUNEDIA
                                 <img className='absolute right-2' src={require('../images/underline-black.png')} alt='' />
                             </span></a>
@@ -32,7 +32,7 @@ const Main = ({ redirectToAuth }) => {
 
                         <p className="max-sm:text-3xl max-md:text-4xl md:w-[700px] lg:w-[810px] max-md:mx-10 text-center leading-[60px] font-medium text-5xl -mb-3 md:mb-5 text-neutral-300">PROMOTE YOUR <span className='text-[#fff]'>YOUTUBE</span> VIDEO TO MILLIONS!</p>
 
-                        <p className="text-lg font-light w-full text-center px-10 text-white">Make your <span className='text-[#d88b0f]'>Views</span> and
+                        <p className="text-lg font-light w-full text-center px-10 text-white max-md:mb-5">Make your <span className='text-[#d88b0f]'>Views</span> and
                             <span className='text-[#d88b0f]'> Likes</span>  skyrocket with our Professional Promotion strategies.</p>
                     </div>
 

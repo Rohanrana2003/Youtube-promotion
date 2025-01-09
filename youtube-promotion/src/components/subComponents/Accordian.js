@@ -8,7 +8,7 @@ const Accordian = ({title, content}) => {
 
     return (
         <div
-            className={`accordion border border-solid p-4 rounded-xl transition duration-500 hover:bg-[#fffcf6]    ${active ? "bg-[#fffcf6] border-[#D88B0F]" : "border-gray-400  "} mb-3 lg:p-4 active`}
+            className={`accordion border border-solid max-md:p-3 p-4 rounded-xl transition duration-500 hover:bg-[#fffcf6]    ${active ? "bg-[#fffcf6] border-[#D88B0F]" : "border-gray-400  "} mb-3 active`}
             id="basic-heading-one-with-icon" 
         >
             <button
@@ -16,7 +16,7 @@ const Accordian = ({title, content}) => {
                 aria-controls="basic-collapse-one-with-icon"
                 onClick={()=>setActive(!active)}
             >
-                <h5>{title}</h5>
+                <h5 className='text-[15px] md:text-[17px]'>{title}</h5>
  
                 {active ? <span>{subtractIcon}</span> : <span>{plusIcon}</span>}
             </button>
@@ -29,7 +29,7 @@ const Accordian = ({title, content}) => {
                     aria-labelledby="basic-heading-one"
                     style={{ maxHeight: '250px' }}
                 >
-                    <p className="text-base text-gray-900 font-normal leading-6 overflow-hidden  ">
+                    <p className="text-[14px] md:text-[15px] text-gray-900 font-normal leading-6 overflow-hidden  ">
                         {content}
                     </p>
                 </div>
