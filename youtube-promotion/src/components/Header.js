@@ -84,6 +84,7 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
     setSelectedItem(item.id); // Update selected button in header
     setShowButton(true) // Show the Login button on header
     setShowHeader(true); // Add header background
+    setShowMenu(true); // Close Side menu
   };
 
   const handleLogin = () => {
@@ -103,19 +104,15 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
 
         {/* Header buttons */}
         <div className='flex md:gap-8 mt-[5px] max-md:hidden'>
-
-          {
-            headerItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleButtonClick(item)}
-                className={`hover:text-[#DB880F] text-lg ${selectedItem === item.id ? "text-[#DB880F]" : "text-white"}`}
-              >
-                {item.label}
-              </button>
-            ))
-          }
-
+          {headerItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => handleButtonClick(item)}
+              className={`hover:text-[#DB880F] text-lg ${selectedItem === item.id ? "text-[#DB880F]" : "text-white"}`}
+            >
+              {item.label}
+            </button>
+          ))}
         </div>
       </div>
 
@@ -123,17 +120,20 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
 
       <div className={`absolute top-0 left-0 flex flex-col  mt-[5px] bg-[#18181B] h-screen w-[300px] md:hidden ${showMenu ? 'hidden' : 'close'}`}>
         <img onClick={handleLogoClick} src={logo} alt="Logo" className="h-32 w-32 m-5 mb-10 cursor-pointer" />
-        {
-          headerItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => handleButtonClick(item)}
-              className={`bg-slate-900 my-2 py-3 text-lg  ${selectedItem === item.id ? "text-[#DB880F]" : "text-white"}`}
-            >
-              {item.label}
-            </button>
-          ))
-        }
+        {headerItems.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => handleButtonClick(item)}
+            className={`bg-slate-900 my-2 py-3 text-lg  ${selectedItem === item.id ? "text-[#DB880F]" : "text-white"}`}
+          >
+            {item.label}
+          </button>
+        ))}
+        {/* Copyright Section */}
+        <div className="mt-8 flex w-full justify-center gap-2 items-center absolute bottom-20 -left-5">
+          <img className='h-10' src={require('../images/younedia.png')} alt='younedia' />
+          <span>&copy; {new Date().getFullYear()} YOUNEDIA <br/>All Rights Reserved.</span>
+        </div>
       </div>
 
 

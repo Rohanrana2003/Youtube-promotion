@@ -12,9 +12,9 @@ const Footer = () => {
         {/* Join our Community Section */}
         <div className="flex-1" >
           <h2 className="text-lg text-[#D29B2D] font-semibold mb-2">Join our Community!</h2>
-          <div className='ml-1 text-[15px] font-normal text-gray-300'>
-            <p><a className='hover:text-gray-400 flex items-center gap-[6px]' href='mailto:info@younedia.com'><span>{mailIcon}</span>info@younedia.com</a></p>
-            <p className='flex gap-[6px] items-center'><span>{phoneIcon}</span> Call or Whatsapp: <a href="tel:+918253000032" className="hover:text-gray-400 ">+91 8253000032</a></p>
+          <div className='ml-1 text-[15px] font-normal text-gray-300 '>
+            <p><a className='hover:text-gray-400 flex items-center gap-[6px] max-md:justify-center' href='mailto:info@younedia.com'><span>{mailIcon}</span>info@younedia.com</a></p>
+            <p className='flex gap-[6px] items-center max-md:justify-center'><span>{phoneIcon}</span> <a href="tel:+918253000032" className="hover:text-gray-400 ">+91 8253000032</a></p>
             <p>721, 7th Floor, Zone 3, Unity Homeland,<br />CP 67, Sector 67, Mohali, Punjab 160062</p>
           </div>
         </div>
@@ -56,7 +56,6 @@ const Footer = () => {
       <div className="mt-8 flex w-full justify-center gap-2x` items-center">
         <img className='h-10' src={require('../images/younedia.png')} alt='younedia'/>
         <span>&copy; {new Date().getFullYear()} YOUNEDIA All Rights Reserved.</span>
-        
       </div>
     </footer>
   );
