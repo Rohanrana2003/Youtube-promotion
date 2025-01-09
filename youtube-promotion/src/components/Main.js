@@ -51,11 +51,11 @@ const Main = ({ redirectToAuth }) => {
             </section>
 
             <section>
-                {/* <AdShow /> */}
+                <AdShow />
             </section>
 
             <section>
-                {/* <WhyChoose /> */}
+                <WhyChoose />
             </section>
 
             <section>
