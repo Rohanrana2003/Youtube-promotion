@@ -11,15 +11,9 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
   const [isOpen, setIsOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [showMenu, setShowMenu] = useState(true);
-  const [showHeader, setShowHeader] = useContext(MyContext);
-  const [selectedItem, setSelectedItem] = useContext(MyContext);
+  const { showHeader, setShowHeader, selectedItem, setSelectedItem } = useContext(MyContext);
   const navigate = useNavigate(); // Use React Routser's useNavigate for redirecting
   const location = useLocation();
-  // const headerItems = [
-  //   { id: 1, label: 'Faq' },
-  //   { id: 2, label: 'About' },
-  //   { id: 3, label: 'Contact' },
-  // ]
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (res) => {
@@ -32,8 +26,8 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
         navigate('/')
       }
     })
-    setSelectedItem(null);
-    // window.scrollTo(0, 0);
+    setSelectedItem(1);
+    window.scrollTo(0, 0);
 
     return () => unsubscribe();
   }, [])
@@ -46,7 +40,6 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
         setShowHeader(true) //Add header background
         return;
       }
-
       const currentScrollPos = window.pageYOffset;
       setPrevScrollPos(currentScrollPos)
 
@@ -68,23 +61,34 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
     } catch (error) {
       console.error('Sign Out Error', error);
     }
-    setSelectedItem(null); // Update selected button in header
+    setSelectedItem(1); // Update selected button in header
   };
 
   const handleLogoClick = () => {
     navigate('/')
     window.scrollTo(0, 0);
-    setShowButton(true) // Show the Login button on header
-    setSelectedItem(null); // Update selected button in header
+    // setShowButton(true) // Show the Login button on header
+    setSelectedItem(1); // Update selected button in header
     setShowHeader(false); //Remove header background
   };
 
   const handleButtonClick = (item) => {
-    navigate(item.label)
+    if (item.label === 'Home') {
+      setShowHeader(false);
+    }
+    else{
+      setShowHeader(true);
+    }
+    window.scrollTo(0, 0);
+    navigate(item.path)
     setSelectedItem(item.id); // Update selected button in header
     setShowButton(true) // Show the Login button on header
-    setShowHeader(true); // Add header background
     setShowMenu(true); // Close Side menu
+  };
+
+  const handleDropdownButtonClick = (item) => {
+    navigate(item.path)
+    setSelectedItem(item.id); // Update selected button in header
   };
 
   const handleLogin = () => {
@@ -104,7 +108,7 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
 
         {/* Header buttons */}
         <div className='flex md:gap-8 mt-[5px] max-md:hidden'>
-          {headerItems.map((item) => (
+          {dropdownItems.map((item) => (
             <button
               key={item.id}
               onClick={() => handleButtonClick(item)}
@@ -117,10 +121,9 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
       </div>
 
       {/* Mobile Side bar */}
-
       <div className={`absolute top-0 left-0 flex flex-col  mt-[5px] bg-[#18181B] h-screen w-[300px] md:hidden ${showMenu ? 'hidden' : 'close'}`}>
-        <img onClick={handleLogoClick} src={logo} alt="Logo" className="h-32 w-32 m-5 mb-10 cursor-pointer" />
-        {headerItems.map((item) => (
+        <img src={logo} alt="Logo" className="h-32 w-32 m-5 mb-10 cursor-pointer" />
+        {dropdownItems.map((item) => (
           <button
             key={item.id}
             onClick={() => handleButtonClick(item)}
@@ -177,11 +180,15 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
               {
                 isOpen
                 &&
-
                 <ul className='shadow-black shadow bg-gray-800 w-[95%] bg-opacity-90 text-center rounded absolute right-0 top-[47px]'>
                   {
                     dropdownItems.map((item) => (
-                      <li key={item.id} className='hover:text-[#D88B0F] hover:bg-black after:block after:h-[1px] after:mt-1 hover:after:bg-black after:bg-[#5e5e5e] text-white text-[14px]  my-1 py-[3px] px-6  max-md:px-4 max-md:text-[13px]  cursor-pointer' onClick={() => { navigate(item.path); setIsOpen(false) }}>{item.label}</li>
+                      <li key={item.id} onClick={() => handleDropdownButtonClick(item)}
+                        className={`hover:text-[#D88B0F] hover:bg-black after:block after:h-[1px] after:mt-1 hover:after:bg-black after:bg-[#5e5e5e] text-[14px]  
+                                    my-1 py-[3px] px-6  max-md:px-4 max-md:text-[13px] cursor-pointer ${selectedItem === item.id ? "text-[#DB880F]" : "text-white"}`}
+                      >
+                        {item.label}
+                      </li>
                     ))
                   }
                   <li className='hover:bg-red-800 bg-red-700 text-white mx-5 max-md:text-[13px] text-[14px] my-1 mb-3 py-[3px] px-3  cursor-pointer' onClick={handleSignOut}>Logout</li>

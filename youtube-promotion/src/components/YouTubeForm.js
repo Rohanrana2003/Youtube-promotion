@@ -15,7 +15,7 @@ const CombinedForm = ({ user }) => {
   const [isForeign, setIsForeign] = useState(false);
   const [duration, setDuration] = useState("");
   const [views, setViews] = useState(0);
-  const [, setShowHeader] = useContext(MyContext);
+  const { setShowHeader} = useContext(MyContext);
 
   // List of countries for the dropdown
   // const countries = [
@@ -206,7 +206,7 @@ const CombinedForm = ({ user }) => {
           className="w-full pl-[70px] max-sm:pl-[50px] max-sm:text-[15px] p-4 max-sm:py-3 mb-4 rounded-md border border-transparent bg-[#1A1F27] text-white focus:shadow-md focus:shadow-[#DD2C28] outline-none transition-all ease-in duration-400"
         />
         {urlError && youtubeUrl ? (
-          <p className="text-red-500 text-md text-center mb-4">
+          <p className="text-red-500 text-md max-sm:text-sm text-center mb-4">
             Invalid YouTube link. Please check the URL.
           </p>
         ) : thumbnailUrl ? (

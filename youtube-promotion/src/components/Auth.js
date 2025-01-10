@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { auth } from '../utils/FirebaseConfig'; // Import the Firebase auth
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, updateProfile } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom'; // For navigation
 import { checkValidData } from '../utils/ValidateForm';
 import { errorIcon, googleIcon } from '../utils/constants';
+import MyContext from '../context/MyContext';
 
 
 const Auth = ({ onAuthSuccess }) => {
@@ -12,6 +13,7 @@ const Auth = ({ onAuthSuccess }) => {
   const [password, setPassword] = useState('');
   const [isSignUp, setIsSignUp] = useState(false); // Toggle between Login/Signup
   const [error, setError] = useState(null);
+  const { setSelectedItem} = useContext(MyContext);
   const navigate = useNavigate(); // Use React Router's useNavigate for redirecting
 
   useEffect(() => {
@@ -45,6 +47,7 @@ const Auth = ({ onAuthSuccess }) => {
             // alert('Signup successful');
             onAuthSuccess(user); // Pass the user data back to parent
             navigate('/youtube-link'); // Navigate to YouTube link page
+            setSelectedItem(1);
           })
 
           .catch(error => {
@@ -60,6 +63,7 @@ const Auth = ({ onAuthSuccess }) => {
             // alert('Login successful');
             onAuthSuccess(userCredential.user); // Pass the user data back to parent
             navigate('/youtube-link'); // Navigate to YouTube link page
+            setSelectedItem(1);
           })
           .catch(error => {
             setError('Invalid Credentials')
@@ -81,6 +85,7 @@ const Auth = ({ onAuthSuccess }) => {
       // alert('Google Sign-In successful');
       onAuthSuccess(user); // Pass the user data back to parent
       navigate('/youtube-link'); // Navigate to YouTube link page
+      setSelectedItem(1);
     } catch (error) {
       // alert('Error: ' + error.message);s
       // setError(error.message);

@@ -5,17 +5,17 @@ import MyContext from '../../context/MyContext';
 
 const GetStarted = ({ redirectToAuth }) => {
 
-    const [, setSelectedItem] = useContext(MyContext);
+    const { setSelectedItem} = useContext(MyContext);
     const navigate = useNavigate();
 
     const redirectToFaq = () => {
         navigate('/faq');
-        setSelectedItem(1);
+        setSelectedItem(2);
     }
 
     const redirectToAbout = () =>{
         navigate('/about');
-        setSelectedItem(2);
+        setSelectedItem(3);
     }
 
     return (

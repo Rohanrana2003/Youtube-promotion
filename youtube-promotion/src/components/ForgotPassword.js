@@ -30,21 +30,22 @@ const ForgotPassword = () => {
     }
 
     return (
-        <div className='h-[100vh] flex items-center justify-center w-full'>
+        <div className=' flex items-center justify-center w-full'>
+
+         {/* Black transparent Background  */}
+         <div className='fixed top-0 h-full object-cover w-screen  bg-black opacity-20 -z-10' ></div>
 
             {/* Background Image */}
-            <div className='absolute top-0 h-[100vh] -z-20'>
-                <img className='h-screen w-screen object-cover ' src={require('../images/forgot.jpg')} alt='bg' />
-            </div>  
+                <img className='fixed -z-20 h-[100vh] top-0 w-screen object-cover' src={require('../images/forgot.jpg')} alt='bg' />
 
-            <div className='-ml-20 pt-28 p-6 rounded-3xl flex gap-32 items-center justify-center'>
+            <div className='lg:-ml-20  pt-28 p-6 rounded-3xl flex lg:gap-32 max-lg:flex-col items-center justify-center'>
 
-                <img className='w-[480px]' src={require('../images/forgotPassword.png')} alt='forgotPassword' />
+                <img className='w-[250px] lg:w-[480px] md:w-[400px] max-lg:mx-auto max-lg:flex' src={require('../images/forgotPassword.png')} alt='forgotPassword' />
 
                 <div className='text-center h-[370px]'>
-                    <h1 className='font-bold text-5xl mt-10 mb-2 text-white'>Forgot <span className='text-[#D88B0F]'>Password</span> </h1>
+                    <h1 className='font-bold text-5xl max-lg:text-4xl max-sm:text-[28px] mt-10 mb-2 text-white'>Forgot <span className='text-[#D88B0F]'>Password</span> </h1>
 
-                    <p className='text-gray-300 text-md mb-6 text-center w-[350px] '>Enter your email and we'll send you a link to reset your password.</p>
+                    <p className='text-gray-300 text-md max-md:text-[15px] max-md:px-3 mb-6 text-center max-w-[350px] '>Enter your email and we'll send you a link to reset your password.</p>
 
                     <form onSubmit={handleSubmit} >
 
@@ -56,7 +57,7 @@ const ForgotPassword = () => {
                                 placeholder="Email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="block  pl-10 border border-gray-600 w-full p-[10px] mb-2 text-white rounded opacity-70 bg-[#1A1F27] focus:bg-opacity-85 bg-opacity-40 focus:outline-none focus:shadow-[#D88B0F] focus:shadow-custom"
+                                className="block pl-10 border border-gray-600 w-full p-[10px] mb-2 text-white rounded opacity-70 bg-[#1A1F27] focus:bg-opacity-85 bg-opacity-40 focus:outline-none focus:shadow-[#D88B0F] focus:shadow-custom"
                             />
                         </div>
                         {
@@ -73,7 +74,8 @@ const ForgotPassword = () => {
                                 <p className='mb-3'></p>
                         }
 
-                        <button type='submit' className='bg-gradient-to-b  from-[#2366e1] to-[#203f78] hover:opacity-85  text-white font-semibold py-2 px-4 rounded w-full'>Submit</button>
+                        <button type='submit' 
+                            className='py-2 px-4 rounded  w-full bg-gradient-to-b  from-[#2366e1] to-[#203f78] hover:opacity-85  text-white font-semibold'>Submit</button>
                     </form>
 
                     <div className='w-full flex justify-center'>

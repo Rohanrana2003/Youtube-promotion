@@ -4,7 +4,7 @@ import WhyChoose from './subComponents/WhyChoose';
 const About = ({ redirectToAuth }) => {
 
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, [])
 
     return (

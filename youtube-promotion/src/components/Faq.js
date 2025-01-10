@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Faq = () => {
 
-    const [, setSelectedItem] = useContext(MyContext);
+    const { setSelectedItem} = useContext(MyContext);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -14,7 +14,7 @@ const Faq = () => {
     }, [])
 
     const handleContactRedirect = () => {
-        setSelectedItem(3);
+        setSelectedItem(4);
         navigate('/contact');
     }
 

@@ -5,12 +5,10 @@ export const headerItems = [
 ];
 
 export const dropdownItems = [
-  { id: 1, label: 'Home', path:'youtube-link' },
-  { id: 3, label: 'Contact', path:'contact'  },
-  { id: 2, label: 'About', path:'about'  },
-  { id: 1, label: 'Faq', path:'faq'  },
-
-
+  { id: 1, label: 'Home', path:'/' },
+  { id: 2, label: 'Faq', path:'faq'  },
+  { id: 3, label: 'About', path:'about'  },
+  { id: 4, label: 'Contact', path:'contact'  },
 ];
 
 export const accordionData = [

@@ -13,11 +13,11 @@ import MyContext from './context/MyContext';
 function App() {
   const [user, setUser] = useState(null); // Store the authenticated user
   const [authPage, setAuthPage] = useState(true); // Store the authenticated user
-  const [selectedItem, setSelectedItem] = useState(null); // handle selected Header buttons
+  const [selectedItem, setSelectedItem] = useState(1); // handle selected Header buttons
   const [showHeader, setShowHeader] = useState(false); // handle hide/show header
   const navigate = useNavigate()
 
-
+ 
   // Callback to handle successful authentication
   const handleAuthSuccess = (authenticatedUser) => {
     console.log(authenticatedUser)
@@ -37,7 +37,7 @@ function App() {
 }
  
   return (
-      <MyContext.Provider value={[selectedItem, setSelectedItem,showHeader, setShowHeader ]}>
+      <MyContext.Provider value={{selectedItem, setSelectedItem, showHeader, setShowHeader }}>
         <Header user={user} onSignOut={handleSignOut} setUser={setUser} showButton={authPage} setShowButton={setAuthPage} redirectToAuth={redirectToAuth}/>
         <Routes>
           {/* Route for Main Page */}
