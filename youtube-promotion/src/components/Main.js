@@ -19,7 +19,7 @@ const Main = ({ redirectToAuth }) => {
                 <div className='fixed top-0 h-full object-cover w-screen  bg-black opacity-55 -z-10' ></div>
 
                 {/* Background Image  */}
-                    <img className='top-0 fixed h-[100vh] w-screen -z-20  after:absolute after:content-[""] after:w-[100vw] after:h-[100vh] after:bg-black object-cover' src={require('../images/background.jpg')} alt='bg' />
+                    <img className='top-0 fixed object-center h-[100vh] w-screen -z-20 after:absolute after:content-[""] after:w-[100vw] after:h-[100vh] after:bg-black object-cover' src={require('../images/background.jpg')} alt='bg' />
 
                 <div className="flex items-center justify-center flex-col">
 

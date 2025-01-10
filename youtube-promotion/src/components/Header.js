@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom'; // For navigation
 import logo from '../images/younedia.png';
 import { useContext, useEffect, useState } from 'react';
 import MyContext from '../context/MyContext';
-import { headerItems } from '../utils/constantData';
+import { dropdownItems, headerItems } from '../utils/constantData';
 
 const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectToAuth }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +33,7 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
       }
     })
     setSelectedItem(null);
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
 
     return () => unsubscribe();
   }, [])
@@ -93,13 +93,13 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
   }
 
   return (
-    <header className={`px-6 py-2 max-md:py-3 z-30 fixed w-screen transition-all duration-300 ease-in-out text-white flex justify-between items-center ${showHeader ? 'bg-zinc-900 shadow-header-shadow shadow-black' : 'bg-transparent'}`}>
+    <header className={`px-4 py-2 z-30 fixed w-screen transition-all duration-300 ease-in-out text-white flex justify-between items-center ${showHeader ? 'bg-zinc-900 shadow-header-shadow shadow-black' : 'bg-transparent'}`}>
 
       <div className='flex items-center justify-between gap-8 md:gap-12'>
         {/* Logo and Main Heading */}
         <div className="flex items-center">
-          <img onClick={handleLogoClick} src={logo} alt="Logo" className="max-sm:h-16 h-14 cursor-pointer" />
-          <h1 onClick={handleLogoClick} className="ml-4 max-md:ml-1 text-[#D88B0F] max-sm:w-10 max-sm:text-[22px] text-3xl font-[600] cursor-pointer max-md:leading-[25px]">YouTube <span className='text-white'>Promotion</span></h1>
+          <img onClick={handleLogoClick} src={logo} alt="Logo" className=" h-14 cursor-pointer" />
+          <h1 onClick={handleLogoClick} className="ml-4 max-md:ml-1 text-[#D88B0F] max-sm:w-10 max-sm:text-[19px] text-3xl font-[600] cursor-pointer max-md:leading-[25px]">YouTube <span className='text-white'>Promotion</span></h1>
         </div>
 
         {/* Header buttons */}
@@ -132,7 +132,7 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
         {/* Copyright Section */}
         <div className="mt-8 flex w-full justify-center gap-2 items-center absolute bottom-20 -left-5">
           <img className='h-10' src={require('../images/younedia.png')} alt='younedia' />
-          <span>&copy; {new Date().getFullYear()} YOUNEDIA <br/>All Rights Reserved.</span>
+          <span>&copy; {new Date().getFullYear()} YOUNEDIA <br />All Rights Reserved.</span>
         </div>
       </div>
 
@@ -146,43 +146,45 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
       }
 
       {/* Hamburger Button */}
-      <div>
-        {showMenu ? <img className='w-8 absolute right-8 top-6 cursor-pointer md:hidden' onClick={() => setShowMenu(false)} src={require('../images/menu-open.png')} alt='' />
-          : <img className='w-6 absolute right-8 top-6 cursor-pointer md:hidden' onClick={() => setShowMenu(true)} src={require('../images/menu-close.png')} alt='' />}
-      </div>
-
+      {!user && <div>
+        {showMenu ? <img className='w-7 absolute right-8 top-5 cursor-pointer md:hidden' onClick={() => setShowMenu(false)} src={require('../images/menu-open.png')} alt='' />
+          : <img className='w-5 absolute right-8 top-6 cursor-pointer md:hidden' onClick={() => setShowMenu(true)} src={require('../images/menu-close.png')} alt='' />}
+      </div>}
 
       {/* Form page Drop-down */}
       <div className="flex items-center">
         {user ? (
-          <div className="flex items-center " onMouseOver={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
+          <div className="flex items-center " onMouseOver={() => setIsOpen(true)} onClick={() => setIsOpen(!isOpen)} onMouseLeave={() => setIsOpen(false)}>
 
-            <div className='relative border shadow-black shadow border-gray-500 hover:border-[#D88B0F]  p-2 rounded-lg pr-0 cursor-pointer'>
+            <div className={`relative border shadow-black shadow p-2 rounded-lg pr-0 cursor-pointer ${!isOpen ? 'border-gray-500' : 'border-[#D88B0F]'} `}>
               <div className='flex gap-2 mr-3 items-center' >
                 {!user.photoURL ?
                   (<img
                     src={require('../images/userIcon.png')}
                     alt='user'
-                    className="w-8 rounded-full mx-1"
+                    className="w-8 max-md:w-6 rounded-full mx-1 max-md:mx-0"
                   />)
                   : (
                     <img
                       src={user.photoURL}
                       alt={user.displayName || 'Profile'}
-                      className="w-7 h-7 rounded-full ml-2"
+                      className="w-7 h-7 max-md:w-6 max-md:h-6 rounded-full ml-2 max-md:ml-1"
                     />
                   )}
-                <span className='font-medium text-lg mr-1 mt-[2px]'>{user.displayName || 'User'}</span>
-                <img className='h-[8px] mt-1 mr-1' src={require('../images/down-arrow.png')} alt='' />
+                <span className='font-medium text-lg max-md:text-base mr-1 max-md:mr-0 mt-[2px]'>{user.displayName || 'User'}</span>
+                <img className='h-[8px] max-md:h-[7px] mt-1 mr-1 max-md:mr-0' src={require('../images/down-arrow.png')} alt='' />
               </div>
-
               {
                 isOpen
                 &&
-                <ul className='shadow-black shadow bg-gray-700 w-[95%] bg-opacity-90 text-center rounded absolute right-0 top-[45px]'>
-                  <li className='hover:text-[#D88B0F] hover:bg-black after:block after:h-[1px] after:mt-1 after:bg-black text-white text-[14px]  my-1 mt-3 py-[3px] px-6   cursor-pointer'><a href='https://www.younedia.com/contact-us' rel='noreferrer' target='_blank'>Contact Us</a> </li>
-                  <li className='hover:text-[#D88B0F] hover:bg-black after:block after:h-[1px] after:mt-1 after:bg-black text-white text-[14px]  my-1 py-[3px] px-6   cursor-pointer'><a href='https://www.younedia.com/about-us' rel='noreferrer' target='_blank'>About Us</a> </li>
-                  <li className='hover:text-red-700 hover:bg-black text-white text-[14px] my-1 mb-3 py-[3px] px-6  cursor-pointer' onClick={handleSignOut}>Logout</li>
+
+                <ul className='shadow-black shadow bg-gray-800 w-[95%] bg-opacity-90 text-center rounded absolute right-0 top-[47px]'>
+                  {
+                    dropdownItems.map((item) => (
+                      <li key={item.id} className='hover:text-[#D88B0F] hover:bg-black after:block after:h-[1px] after:mt-1 hover:after:bg-black after:bg-[#5e5e5e] text-white text-[14px]  my-1 py-[3px] px-6  max-md:px-4 max-md:text-[13px]  cursor-pointer' onClick={() => { navigate(item.path); setIsOpen(false) }}>{item.label}</li>
+                    ))
+                  }
+                  <li className='hover:bg-red-800 bg-red-700 text-white mx-5 max-md:text-[13px] text-[14px] my-1 mb-3 py-[3px] px-3  cursor-pointer' onClick={handleSignOut}>Logout</li>
                 </ul>
               }
             </div>

@@ -114,7 +114,7 @@ const CombinedForm = ({ user }) => {
     const usdToInrConversionRate = 80; // Example conversion rate
     const budgetInINR = parseFloat(budget) * usdToInrConversionRate * 100; // Convert to paisa
     const options = {
-      key: process.env.RAZORPAY_TEST_KEY1, // Replace with your Razorpay test key ID
+      key: 'rzp_test_DvwtNaJvTOM4Y6c', // Replace with your Razorpay test key ID
  
       amount: budgetInINR,
       currency: "INR",
@@ -192,25 +192,25 @@ const CombinedForm = ({ user }) => {
       </div>
 
       {/* Form area */}
-      <div className="bg-zinc-900 bg-opacity-70 p-8 px-16 rounded-md shadow-black shadow-md max-w-[630px] w-full text-white">
-        <h1 className="text-4xl text-  font-semibold text-center mb-6">
+      <div className="bg-zinc-900 bg-opacity-70 p-8 px-16 max-sm:px-4 rounded-md shadow-black shadow-md max-w-[630px] w-full text-white">
+        <h1 className="text-4xl max-md:text-2xl  font-semibold text-center mb-6">
           Start Your <span className="text-[#D88B0F]">Promotion</span>
         </h1>
-        <img className="absolute mt-[14px] ml-[6px] h-8 flex z-10 items-center pl-[8px]" src={require('../images/youtube.png')} alt="youtube" />
+        <img className="absolute mt-[13px] ml-[12px] h-8 max-sm:h-6 flex z-10 items-center " src={require('../images/youtube.png')} alt="youtube" />
 
         <input
           type="text"
           value={youtubeUrl}
           onChange={handleUrlChange}
           placeholder="Paste YouTube Link"
-          className="w-full pl-[70px] p-4 mb-4 rounded-md border border-transparent bg-[#1A1F27] text-white focus:shadow-md focus:shadow-[#DD2C28] outline-none transition-all ease-in duration-400"
+          className="w-full pl-[70px] max-sm:pl-[50px] max-sm:text-[15px] p-4 max-sm:py-3 mb-4 rounded-md border border-transparent bg-[#1A1F27] text-white focus:shadow-md focus:shadow-[#DD2C28] outline-none transition-all ease-in duration-400"
         />
         {urlError && youtubeUrl ? (
           <p className="text-red-500 text-md text-center mb-4">
             Invalid YouTube link. Please check the URL.
           </p>
         ) : thumbnailUrl ? (
-          <iframe className="w-[85%] mx-auto aspect-video rounded-md mb-4" src={thumbnailUrl} title="youtube_video"></iframe>
+          <iframe className="w-[85%] mx-auto aspect-video rounded-md mt-2 mb-4" src={thumbnailUrl} title="youtube_video"></iframe>
           /* <img
             src={thumbnailUrl}
             alt="YouTube Thumbnail"
@@ -222,12 +222,12 @@ const CombinedForm = ({ user }) => {
           user ? (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-4">
-                <h4 className="text-4xl mt-16 mb-5 font-semibold text-white  py-2 bg-[#D88B0F] rounded-sm text-center">
+                <h4 className="text-4xl max-sm:text-[20px] max-sm:px-2 mt-16 mb-5 font-semibold text-white max-sm:py-1 py-2 bg-[#D88B0F] rounded-sm text-center">
                   Wants and Target Audience
                 </h4>
-                <div>
-                  <h5 className="font-medium mb-2 text-[22px] text-[#D88B0F]">Duration:</h5>
-                  <div className="flex flex-col space-y-2 mb-4 ml-2 text-gray-100 text-[18px]">
+                <div className="px-2">
+                  <h5 className="font-medium mb-2 text-[22px] max-sm:text-[20px] text-[#D88B0F]">Duration:</h5>
+                  <div className="flex flex-col space-y-2 mb-4 ml-2 text-gray-100 text-[18px] max-sm:text-[16px]">
                     <label className="flex items-center space-x-2">
                       <input
                         type="radio"
@@ -271,12 +271,12 @@ const CombinedForm = ({ user }) => {
                   </div>
                 </div>
               </div>
-              <div>
-                <h5 className="font-medium mb-2 text-[22px] text-[#D88B0F]">Target Country:</h5>
+              <div className="px-2">
+                <h5 className="font-medium mb-2 text-[22px] max-sm:text-[20px] text-[#D88B0F]">Target Country:</h5>
                 <select
                   value={country}
                   onChange={handleLocationChange}
-                  className="w-full p-4 mb-4 bg-[#1A1F27] text-white rounded-md outline-none focus:shadow-md focus:shadow-[#D88B0F] transition-all ease-in duration-400"
+                  className="w-full p-4 max-sm:p-3 max-sm:pl-2 max-sm:text-[15px] mb-4 bg-[#1A1F27] text-white rounded-md outline-none focus:shadow-md focus:shadow-[#D88B0F] transition-all ease-in duration-400"
                 >
                   <option value="">Select a country</option>
                   {countries.map((c) => (
@@ -286,10 +286,10 @@ const CombinedForm = ({ user }) => {
                   ))}
                 </select>
               </div>
-              <div>
-                <h5 className="font-medium mb-2 text-[22px] text-[#D88B0F]">Budget $:</h5>
+              <div className="px-2">
+                <h5 className="font-medium mb-2 text-[22px] max-sm:text-[20px] text-[#D88B0F]">Budget $:</h5>
                 <div className="relative">
-                  <span className="absolute mt-[17px] left-1 flex items-center pl-3 text-white">
+                  <span className="absolute mt-[17px] max-sm:mt-[11px] left-1 flex items-center max-sm:pl-[8px] pl-3 text-white">
                     $
                   </span>
                   <input
@@ -298,15 +298,15 @@ const CombinedForm = ({ user }) => {
                     min={0}
                     onChange={(e) => setBudget(e.target.value)}
                     placeholder="Enter Budget"
-                    className="w-full mb-3 pl-10 p-4 bg-[#1A1F27] text-white rounded-md outline-none focus:shadow-md focus:shadow-[#D88B0F] transition-all ease-in duration-400"
+                    className="w-full  max-sm:p-3 max-sm:text-[15px] max-sm:pl-7 mb-3 pl-10 p-4 bg-[#1A1F27] text-white rounded-md outline-none focus:shadow-md focus:shadow-[#D88B0F] transition-all ease-in duration-400"
                   />
                 </div>
               </div>
-              <p className="font-medium mb-2 text-[22px] text-[#D88B0F]">Estimated Views: <span className="text-zinc-300">{views}</span></p>
+              <p className="font-medium px-2 mb-2 text-[22px] max-sm:text-[20px] text-[#D88B0F]">Estimated Views: <span className="text-zinc-300">{views}</span></p>
               <div className="w-full text-center">
                 <button
                   type="submit"
-                  className="w-[60%] bg-gradient-to-b from-[rgb(71,142,255)] to-[rgb(48,109,209)]  hover:opacity-85 mx-auto font-semibold text-white p-3 rounded-md transition-colors"
+                  className="w-[60%] max-sm:text-[14px] max-sm:font-medium max-sm:p-2 bg-gradient-to-b from-[rgb(71,142,255)] to-[rgb(48,109,209)]  hover:opacity-85 mx-auto font-semibold text-white p-3 rounded-md transition-colors"
                 >
                   Proceed to Payment
                 </button>

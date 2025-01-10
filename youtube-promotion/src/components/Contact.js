@@ -29,7 +29,7 @@ const Contact = ({ redirectToAuth }) => {
 
                     <div className='w-[100%] flex gap-5 max-md:gap-2 mb-5 max-md:mb-2 justify-center'>
                         <input
-                            className='border-[2px] border-neutral-600 text-neutral-600 rounded-xl max-md:rounded-lg w-[50%] py-4 px-5 max-md:py-3  max-md:px-3
+                            className='border-[2px] max-md:border-[1px] border-neutral-600 text-neutral-600 rounded-xl max-md:rounded-lg w-[50%] py-4 px-5 max-md:py-3  max-md:px-3
                             text-lg max-md:text-base focus:border-[#DB880F] focus:outline-none'
                             type='text'
                             name='name'
@@ -38,7 +38,7 @@ const Contact = ({ redirectToAuth }) => {
                         />
 
                         <input
-                            className='border-[2px] border-neutral-600 text-neutral-600 rounded-xl max-md:rounded-lg w-[50%] 
+                            className='border-[2px] max-md:border-[1px] border-neutral-600 text-neutral-600 rounded-xl max-md:rounded-lg w-[50%] 
                                     py-4 px-5 max-md:px-3 max-md:py-3 text-lg max-md:text-base focus:border-[#DB880F] focus:outline-none'
                             type='email'
                             name='email'
@@ -48,7 +48,7 @@ const Contact = ({ redirectToAuth }) => {
                     </div>
 
                     <input
-                            className='border-[2px] border-neutral-600 text-neutral-600 rounded-xl max-md:rounded-lg py-4 max-md:mb-2 mb-5 
+                            className='border-[2px] max-md:border-[1px] border-neutral-600 text-neutral-600 rounded-xl max-md:rounded-lg py-4 max-md:mb-2 mb-5 
                                 px-5 max-md:px-3 max-md:py-3 text-lg  max-md:text-base focus:border-[#DB880F] focus:outline-none'
                             type='text'
                             name='topic'
@@ -56,7 +56,7 @@ const Contact = ({ redirectToAuth }) => {
                         />
 
                     <textarea
-                        className='border-[2px] border-neutral-600 text-neutral-600 rounded-xl max-md:rounded-lg py-4 px-5 text-lg max-md:text-base 
+                        className='border-[2px] max-md:border-[1px] border-neutral-600 text-neutral-600 rounded-xl max-md:rounded-lg py-4 px-5 text-lg max-md:text-base 
                              max-md:px-3 max-md:py-3 min-h-48 max-h-48 focus:border-[#DB880F] focus:outline-none'
                         name='message'
                         placeholder='Type Your Message...'
