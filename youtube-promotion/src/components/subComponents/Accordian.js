@@ -16,7 +16,7 @@ const Accordian = ({title, content}) => {
                 aria-controls="basic-collapse-one-with-icon"
                 onClick={()=>setActive(!active)}
             >
-                <h5 className='text-[15px] md:text-[17px]'>{title}</h5>
+                <h5 className={`text-[15px] md:text-[17px] leading-normal ${active? 'mb-1':'mb-0'}`}>{title}</h5>
  
                 {active ? <span>{subtractIcon}</span> : <span>{plusIcon}</span>}
             </button>

@@ -15,7 +15,7 @@ const Works = () => {
 
             <h3 className='mb-2 font-medium max-md:text-[19px] text-[21px]'>Setup</h3>
 
-            <p className='text-[#565656] max-md:text-[16px] text-[18px] '>Add your YouTube channel, choose your weekly budget and targeting information (countries, gender, age, interests)</p>
+            <p className='text-[#565656] max-md:text-[16px] text-[18px] '>Add your YouTube video link, provide your budget, and provide your desired information (video duration, country).</p>
           </div>
           <img className='max-md:w-52 w-64' src={require('../../images/setup.png')} alt=''/>
 
@@ -29,7 +29,7 @@ const Works = () => {
 
             <h3 className='mb-2 font-medium max-md:text-[19px] text-[21px]'>Payment</h3>
 
-            <p className='text-[#565656] max-md:text-[16px] text-[18px]'>Choose your payment method: credit card or manual balance refill. You can pay with all major credit cards or PayPal   </p>
+            <p className='text-[#565656] max-md:text-[16px] text-[18px]'>Choose your payment method: Debit card or manually refilling your balance. All major credit cards and UPI are accepted forms of payment. </p>
           </div>
 
         </section>
@@ -41,7 +41,7 @@ const Works = () => {
 
             <h3 className='mb-2 font-medium max-md:text-[19px] text-[21px]'>Promotion</h3>
 
-            <p className='text-[#565656] max-md:text-[16px] text-[18px]'>The channel promotion starts on YouTube. Your videos will be shown to your chosen audience and subscribers of similar channels. You can follow the promotion progress in your Prodvigate dashboard</p>
+            <p className='text-[#565656] max-md:text-[16px] text-[18px]'>The channel promotion starts on YouTube. Subscribers and viewers of related channels will see your video. </p>
           </div>
 
           <img className='max-md:w-52 w-64' src={require('../../images/promotion.png')} alt=''/>
@@ -57,7 +57,7 @@ const Works = () => {
 
             <h3 className='mb-2 font-medium max-md:text-[19px] text-[21px]'>Results</h3>
 
-            <p className='text-[#565656] max-md:text-[16px] text-[18px]'>Due to the right targeting, you receive views, new subscribers, likes and comments</p>
+            <p className='text-[#565656] max-md:text-[16px] text-[18px]'>You receive views, new subscribers, likes, and comments as a result of effective targeting.</p>
           </div>
 
         </section>

@@ -14,19 +14,19 @@ export const dropdownItems = [
 export const accordionData = [
   {
     title: 'How to create an account?',
-    content: `To create an account, find the 'Sign up' or 'Create account' button, fill out the registration form with your personal information, and click 'Create account' or 'Sign up.' Verify your email address if needed, and then log in to start using the platform.`
+    content: `To create an account, click the 'Sign up' or 'Create account' button, enter your personal information into the registration form, and then click 'Create account' or 'Sign up' to begin using the platform.`
   },
   {
-    title: 'Have any trust issue?',
-    content: `Our focus on providing robust and user-friendly content management capabilities ensures that you can manage your content with confidence, and achieve your content marketing goals with ease.`
+    title: 'What are the payment methods for the YouTube Promotions?',
+    content: `You can use PayPal, Apple Pay, Google Pay, or any major credit card to pay for YouTube promotions. Razorpay is used to securely process all payments..`
   },
   {
-    title: 'How can I reset my password?',
-    content: `Our focus on providing robust and user-friendly content management capabilities ensures that you can manage your content with confidence, and achieve your content marketing goals with ease.`
+    title: 'Can you promise me more views on YouTube?',
+    content: `Yes, an increase in YouTube views is guaranteed with every campaign. We will return any money that remains in your account if Google Ads rejects your video promotion and we are unable to provide the views.`
   },
   {
-    title: 'What is the payment process?',
-    content: `Our focus on providing robust and user-friendly content management capabilities ensures that you can manage your content with confidence, and achieve your content marketing goals with ease.`
+    title: 'Is it possible to advertise more than one YouTube video at once?',
+    content: `Yes, It is possible to advertise many videos simultaneously. But every video needs a different marketing. This method guarantees that every video is set up to reach the greatest number of people for maximum effectiveness.`
   }
 ];
 

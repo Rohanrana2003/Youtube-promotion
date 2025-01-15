@@ -26,7 +26,7 @@ const Main = ({ redirectToAuth }) => {
                     <div className='flex flex-col items-center py-5 mb-7  max-md:gap-10 font-sans'>
                         <h1 className="max-md:text-[26px] text-3xl max-md:my-10 px-4 my-4 mb-7 md:mb-14 text-white text-center">YouTube Promotions With  
                         <a href='https://www.younedia.com/' target='_blank' rel='noreferrer'>
-                            <span className='relative text-[#D88B0F] z-10  hover:text-white'> YOUNEDIA
+                            <span className='relative text-[#D88B0F] z-10  hover:text-white transition-all duration-150'> YOUNEDIA
                                 <img className='absolute -right-[6px]' src={require('../images/underline-black.png')} alt='' />
                             </span></a>
                         </h1>

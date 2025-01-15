@@ -24,14 +24,13 @@ const GetStarted = ({ redirectToAuth }) => {
 
             <h1 className=' mb-7 text-[42px] max-sm:text-[36px] mx-5 text-zinc-800 font-semibold text-center'>Achieve your goals with
                 <a href='https://www.younedia.com/' target='_blank' rel='noreferrer'>
-                    <span className='relative text-[#D88B0F] z-10 font-bold hover:text-zinc-800'> YOUNEDIA
+                    <span className='relative text-[#D88B0F] z-10 font-bold hover:text-zinc-800 transition-all duration-150'> YOUNEDIA
                         <img className='absolute -right-2 -bottom-3' src={require('../../images/underline-black.png')} alt='' />
                     </span>
                 </a>
             </h1>
 
-            <p className='mb-9 text-[#696969] max-sm:text-[18px] text-[20px] mx-10 sm:mx-20 md:w-[55vw] text-center'>We promote campaigns through Google Adwords, which helps you to get more
-                subscribers & engagement on your channel.</p>
+            <p className='mb-9 text-[#696969] max-sm:text-[18px] text-[20px] mx-10 sm:mx-20 md:w-[55vw] text-center'>We drive campaigns through Google Ads, enabling you to attract more subscribers and boost engagement on your YouTube channel effectively.</p>
 
             <div className='flex max-sm:flex-col items-center'>
                 <button onClick={()=>{redirectToAuth(); setSelectedItem(1)}}
