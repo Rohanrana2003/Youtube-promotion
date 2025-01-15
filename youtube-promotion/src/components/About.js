@@ -1,7 +1,10 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import WhyChoose from './subComponents/WhyChoose';
+import MyContext from '../context/MyContext';
 
 const About = ({ redirectToAuth }) => {
+
+    const { setSelectedItem} = useContext(MyContext);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -52,7 +55,7 @@ const About = ({ redirectToAuth }) => {
                     <div className='relative lg:min-w-[450px]'>
                         <img className='w-full' src={require('../images/about-mission.jpg')} alt='' />
                         <button
-                            onClick={redirectToAuth}
+                            onClick={()=>{redirectToAuth(); setSelectedItem(1)}}
                             className='absolute bottom-5 right-[80px] md:right-[104px] py-3 px-10 max-md:px-5 text-[#D88B0F] text-lg max-md:text-base font-medium bg-white shadow-md shadow-black hover:shadow-none transition-all ease-in duration-100 hover:scale-[.99]'
                         >
                             Start Promotion

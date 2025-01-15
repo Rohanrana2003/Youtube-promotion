@@ -23,14 +23,15 @@ const Main = ({ redirectToAuth }) => {
 
                 <div className="flex items-center justify-center flex-col">
 
-                    <div className='flex flex-col items-center py-5 mb-7  max-md:gap-10'>
-                        <h1 className="max-md:text-[40px] text-5xl max-md:my-10 font-normal px-4 my-4 mb-7 text-white text-center">Welcome to <a href='https://www.younedia.com/' target='_blank' rel='noreferrer'>
-                            <span className='relative text-[#D88B0F] z-10  hover:text-white'>YOUNEDIA
-                                <img className='absolute right-2' src={require('../images/underline-black.png')} alt='' />
+                    <div className='flex flex-col items-center py-5 mb-7  max-md:gap-10 font-sans'>
+                        <h1 className="max-md:text-[26px] text-3xl max-md:my-10 px-4 my-4 mb-7 md:mb-14 text-white text-center">YouTube Promotions With  
+                        <a href='https://www.younedia.com/' target='_blank' rel='noreferrer'>
+                            <span className='relative text-[#D88B0F] z-10  hover:text-white'> YOUNEDIA
+                                <img className='absolute -right-[6px]' src={require('../images/underline-black.png')} alt='' />
                             </span></a>
                         </h1>
 
-                        <p className="max-sm:text-3xl max-md:text-4xl md:w-[700px] lg:w-[810px] max-md:mx-10 text-center leading-[60px] font-medium text-5xl -mb-3 md:mb-5 text-neutral-300">PROMOTE YOUR <span className='text-[#fff]'>YOUTUBE</span> VIDEO TO MILLIONS!</p>
+                        <p className="max-sm:text-3xl max-md:text-4xl md:w-[700px] lg:w-[810px] max-md:mx-10 text-center leading-[60px] font-medium text-5xl -mb-3 md:mb-5 text-neutral-300">Hit <span className='text-[#D88B0F]'>Millions</span> of Views On Your YouTube Video</p>
 
                         <p className="text-lg font-light w-full text-center px-10 text-white max-md:mb-5">Make your <span className='text-[#d88b0f]'>Views</span> and
                             <span className='text-[#d88b0f]'> Likes</span>  skyrocket with our Professional Promotion strategies.</p>

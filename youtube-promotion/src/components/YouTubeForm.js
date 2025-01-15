@@ -17,26 +17,6 @@ const CombinedForm = ({ user }) => {
   const [views, setViews] = useState(0);
   const { setShowHeader} = useContext(MyContext);
 
-  // List of countries for the dropdown
-  // const countries = [
-  //   "United States",
-  //   "Canada",
-  //   "United Kingdom",
-  //   "Australia",
-  //   "India",
-  //   "Germany",
-  //   "France",
-  //   "Spain",
-  //   "Italy",
-  //   "Brazil",
-  //   "Mexico",
-  //   "Japan",
-  //   "South Korea",
-  //   "China",
-  //   "Russia",
-  //   "South Africa",
-  // ];
-
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://checkout.razorpay.com/v1/checkout.js";
@@ -114,8 +94,7 @@ const CombinedForm = ({ user }) => {
     const usdToInrConversionRate = 80; // Example conversion rate
     const budgetInINR = parseFloat(budget) * usdToInrConversionRate * 100; // Convert to paisa
     const options = {
-      key: 'rzp_test_DvwtNaJvTOM4Y6c', // Replace with your Razorpay test key ID
- 
+      key: 'rzp_live_O9DAoCvmp5KtL1', // Replace with your Razorpay test key ID
       amount: budgetInINR,
       currency: "INR",
       name: "Video Promotion Payment",
@@ -138,7 +117,7 @@ const CombinedForm = ({ user }) => {
         email: user?.email || "guest@example.com",
       },
       theme: {
-        color: "#3399cc",
+        color: "#D88B0F",
       },
     };
 

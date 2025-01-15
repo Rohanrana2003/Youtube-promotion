@@ -34,7 +34,7 @@ const GetStarted = ({ redirectToAuth }) => {
                 subscribers & engagement on your channel.</p>
 
             <div className='flex max-sm:flex-col items-center'>
-                <button onClick={redirectToAuth}
+                <button onClick={()=>{redirectToAuth(); setSelectedItem(1)}}
                     className='mb-5 sm:mr-3 bg-[#D88B0F] transition-all ease-in duration-100 hover:scale-[.98] hover:bg-opacity-85 max-sm:text-lg text-xl font-medium text-[#ffffff]  max-sm:py-[10px] max-sm:px-[25px] py-[13px] px-[30px] rounded-[5px] '>
                     Start Promotion
                 </button>

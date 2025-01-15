@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom'; // For navigation
 import logo from '../images/younedia.png';
 import { useContext, useEffect, useState } from 'react';
 import MyContext from '../context/MyContext';
-import { dropdownItems, headerItems } from '../utils/constantData';
+import { dropdownItems } from '../utils/constantData';
 
 const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectToAuth }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,11 +57,12 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
       setIsOpen(false)       // Close dropdown
       onSignOut(); // Set user to null in App.js
       navigate('/'); // Redirect to the Main page
-      setShowButton(true); // Show the Login button on header
+      setShowButton(false); // Show the Login button on header
+      setShowHeader(false);
+      setSelectedItem(1); // Update selected button in header
     } catch (error) {
       console.error('Sign Out Error', error);
     }
-    setSelectedItem(1); // Update selected button in header
   };
 
   const handleLogoClick = () => {
@@ -76,7 +77,7 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
     if (item.label === 'Home') {
       setShowHeader(false);
     }
-    else{
+    else {
       setShowHeader(true);
     }
     window.scrollTo(0, 0);

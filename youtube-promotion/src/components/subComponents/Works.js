@@ -8,7 +8,7 @@ const Works = () => {
 
       <div className='flex flex-col items-center '>
 
-        <section className=' flex max-md:flex-col-reverse items-center justify-center max-md:gap-0 max-md:mb-10 gap-32'>
+        <section className=' flex max-md:flex-col-reverse items-center justify-center max-md:gap-0 max-md:mb-10 mb-10 gap-56'>
 
           <div className='max-md:w-[80vw] w-[400px]'>
             <h1 className='max-sm:text-4xl text-6xl  mb25 font-bold text-[#696969]'>01</h1>
@@ -21,7 +21,7 @@ const Works = () => {
 
         </section>
 
-        <section className='flex max-md:flex-col items-center justify-center max-md:gap-0 max-md:mb-10 gap-32'>
+        <section className='flex max-md:flex-col items-center justify-center max-md:gap-0 max-md:mb-10 mb-10 gap-56'>
           <img className='max-md:w-52 w-64' src={require('../../images/payment.png')} alt=''/>
 
           <div className='max-md:w-[80vw] w-[400px] '>
@@ -34,7 +34,7 @@ const Works = () => {
 
         </section>
 
-        <section className='flex max-md:flex-col-reverse items-center justify-center max-md:gap-0 max-md:mb-10 gap-32'>
+        <section className='flex max-md:flex-col-reverse items-center justify-center max-md:gap-0 max-md:mb-10 mb-10 gap-56'>
 
           <div className='max-md:w-[80vw] w-[400px] '>
             <h1 className='max-sm:text-4xl text-6xl mb-2 font-bold text-[#696969]'>03</h1>
@@ -49,7 +49,7 @@ const Works = () => {
 
         </section>
 
-        <section className='flex max-md:flex-col mb-10 items-center justify-center max-md:gap-0 max-md:mb-10 gap-32'>
+        <section className='flex max-md:flex-col items-center justify-center max-md:gap-0 max-md:mb-10 mb-16 gap-56'>
           <img className='max-md:w-40 w-56' src={require('../../images/result.png')} alt=''/>
 
           <div className='max-md:w-[80vw] w-[400px] '>

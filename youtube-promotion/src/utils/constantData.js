@@ -37,7 +37,7 @@ export const SummarizeData = [
     img: require('../images/main-trust.png')
   }, {
     id: 2,
-    desc: 'We promote YouTube channels on YouTube only',
+    desc: 'YouTube Channel promotion only on YouTube',
     img: require('../images/main-monitor.png')
   }, {
     id: 3,
@@ -53,7 +53,7 @@ export const SummarizeData = [
     img: require('../images/main-wallet.png')
   }, {
     id: 6,
-    desc: 'We are always there to help you',
+    desc: 'Customer Support available 24/7',
     img: require('../images/main-support.png')
   }
 ]
