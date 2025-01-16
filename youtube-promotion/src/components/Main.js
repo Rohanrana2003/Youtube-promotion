@@ -13,7 +13,7 @@ const Main = ({ redirectToAuth }) => {
     return (
         <div className=" pt-28 z-50 w-full">
 
-            <section className=' w-full flex flex-col items-center pb-20'>
+            <section className=' w-full flex flex-col items-center pb-20 min-h-screen'>
 
                 {/* Black transparent Background  */}
                 <div className='fixed top-0 h-full object-cover w-screen  bg-black opacity-55 -z-10' ></div>

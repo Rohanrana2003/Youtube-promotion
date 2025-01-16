@@ -43,7 +43,7 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
       const currentScrollPos = window.pageYOffset;
       setPrevScrollPos(currentScrollPos)
 
-      currentScrollPos > 100 ? setShowHeader(true) : setShowHeader(false);
+      currentScrollPos > 50 ? setShowHeader(true) : setShowHeader(false);
     }
 
     window.addEventListener('scroll', handleScroll);
