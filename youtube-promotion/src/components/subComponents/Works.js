@@ -17,12 +17,12 @@ const Works = () => {
 
             <p className='text-[#565656] max-md:text-[16px] text-[18px] '>Add your YouTube video link, provide your budget, and provide your desired information (video duration, country).</p>
           </div>
-          <img className='max-md:w-52 w-64' src={require('../../images/setup.png')} alt=''/>
+          <img className='max-md:w-52 w-64' src={require('../../images/setup.webp')} alt=''/>
 
         </section>
 
         <section className='flex max-md:flex-col items-center justify-center max-md:gap-0 max-md:mb-10 mb-10 gap-56'>
-          <img className='max-md:w-52 w-64' src={require('../../images/payment.png')} alt=''/>
+          <img className='max-md:w-52 w-64' src={require('../../images/payment.webp')} alt=''/>
 
           <div className='max-md:w-[80vw] w-[400px] '>
             <h1 className='max-sm:text-4xl text-6xl mb-2 font-bold text-[#696969]'>02</h1>
@@ -44,13 +44,13 @@ const Works = () => {
             <p className='text-[#565656] max-md:text-[16px] text-[18px]'>The channel promotion starts on YouTube. Subscribers and viewers of related channels will see your video. </p>
           </div>
 
-          <img className='max-md:w-52 w-64' src={require('../../images/promotion.png')} alt=''/>
+          <img className='max-md:w-52 w-64' src={require('../../images/promotion.webp')} alt=''/>
           
 
         </section>
 
         <section className='flex max-md:flex-col items-center justify-center max-md:gap-0 max-md:mb-10 mb-16 gap-56'>
-          <img className='max-md:w-40 w-56' src={require('../../images/result.png')} alt=''/>
+          <img className='max-md:w-40 w-56' src={require('../../images/result.webp')} alt=''/>
 
           <div className='max-md:w-[80vw] w-[400px] '>
             <h1 className='max-sm:text-4xl text-6xl mb-2 font-bold text-[#696969]'>04</h1>

@@ -17,7 +17,7 @@ const About = ({ redirectToAuth }) => {
                 <h2 className="max-md:text-3xl max-md:mt-10 max-md:px-10 text-5xl text-center font-bold text-zinc-800 leading-[3.25rem]">
                     About us
                 </h2>
-                <img className='h-64 max-md:h-40 object-cover max-md:my-5' src={require('../images/about-main.png')} alt='' />
+                <img className='h-64 max-md:h-40 object-cover max-md:my-5' src={require('../images/about-main.webp')} alt='' />
             </section>
 
             {/* Main section */}
@@ -31,7 +31,7 @@ const About = ({ redirectToAuth }) => {
                     </p>
 
                     <div className='h-52 w-full border'>
-                        <img className='h-full w-full  object-cover' src={require('../images/about.jpeg')} alt='' />
+                        <img className='h-full w-full  object-cover' src={require('../images/about.webp')} alt='' />
                     </div>
 
                     <p className='text-justify my-4'>
@@ -53,7 +53,7 @@ const About = ({ redirectToAuth }) => {
                     </div>
 
                     <div className='relative lg:min-w-[450px]'>
-                        <img className='w-full' src={require('../images/about-mission.jpg')} alt='' />
+                        <img className='w-full' src={require('../images/about-mission.webp')} alt='' />
                         <button
                             onClick={() => { redirectToAuth(); setSelectedItem(1) }}
                             className='absolute bottom-5 right-[80px] md:right-[104px] py-3 px-10 max-md:px-5 text-[#D88B0F] text-lg max-md:text-base font-medium bg-white shadow-md shadow-black hover:shadow-none transition-all ease-in duration-100 hover:scale-[.99]'

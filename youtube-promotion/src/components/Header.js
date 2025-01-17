@@ -2,7 +2,7 @@
 import { auth } from '../utils/FirebaseConfig'; // Import your Firebase config
 import { signOut, onAuthStateChanged } from 'firebase/auth';
 import { useNavigate, useLocation } from 'react-router-dom'; // For navigation
-import logo from '../images/younedia.png';
+import logo from '../images/younedia.webp';
 import { useContext, useEffect, useState } from 'react';
 import MyContext from '../context/MyContext';
 import { dropdownItems } from '../utils/constantData';
@@ -135,7 +135,7 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
         ))}
         {/* Copyright Section */}
         <div className="mt-8 flex w-full justify-center gap-2 items-center absolute bottom-20 -left-5">
-          <img className='h-10' src={require('../images/younedia.png')} alt='younedia' />
+          <img className='h-10' src={require('../images/younedia.webp')} alt='younedia' />
           <span>&copy; {new Date().getFullYear()} YOUNEDIA <br />All Rights Reserved.</span>
         </div>
       </div>
@@ -151,8 +151,8 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
 
       {/* Hamburger Button */}
       {!user && <div>
-        {showMenu ? <img className='w-7 absolute right-8 top-5 cursor-pointer md:hidden' onClick={() => setShowMenu(false)} src={require('../images/menu-open.png')} alt='' />
-          : <img className='w-5 absolute right-8 top-6 cursor-pointer md:hidden' onClick={() => setShowMenu(true)} src={require('../images/menu-close.png')} alt='' />}
+        {showMenu ? <img className='w-7 absolute right-8 top-5 cursor-pointer md:hidden' onClick={() => setShowMenu(false)} src={require('../images/menu-open.webp')} alt='' />
+          : <img className='w-5 absolute right-8 top-6 cursor-pointer md:hidden' onClick={() => setShowMenu(true)} src={require('../images/menu-close.webp')} alt='' />}
       </div>}
 
       {/* Form page Drop-down */}
@@ -164,7 +164,7 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
               <div className='flex gap-2 mr-3 items-center' >
                 {!user.photoURL ?
                   (<img
-                    src={require('../images/userIcon.png')}
+                    src={require('../images/userIcon.webp')}
                     alt='user'
                     className="w-8 max-md:w-6 rounded-full mx-1 max-md:mx-0"
                   />)
@@ -176,7 +176,7 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
                     />
                   )}
                 <span className='font-medium text-lg max-md:text-base mr-1 max-md:mr-0 mt-[2px]'>{user.displayName || 'User'}</span>
-                <img className='h-[8px] max-md:h-[7px] mt-1 mr-1 max-md:mr-0' src={require('../images/down-arrow.png')} alt='' />
+                <img className='h-[8px] max-md:h-[7px] mt-1 mr-1 max-md:mr-0' src={require('../images/down-arrow.webp')} alt='' />
               </div>
               {
                 isOpen

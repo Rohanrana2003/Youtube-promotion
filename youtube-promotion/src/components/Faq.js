@@ -25,7 +25,7 @@ const Faq = () => {
                 <h2 className="text-5xl max-md:text-3xl max-md:mt-10 max-md:px-10 text-center font-bold text-zinc-800 md:w-[400px] leading-[3.25rem]">
                     Frequently asked questions
                 </h2>
-                <img className='max-md:h-40 h-64 object-cover' src={require('../images/faq-main.png')} alt='' />
+                <img className='max-md:h-40 h-64 object-cover' src={require('../images/faq-main.webp')} alt='' />
             </section>
 
             {/* Section Content */}
@@ -37,7 +37,7 @@ const Faq = () => {
                     <div className='flex max-md:flex-col max-md:items-center w-[100%] max-md:gap-10 justify-around items-start'>
 
                         <div className=''>
-                            <img className='h-[250px] max-md:h-[200px]' src={require('../images/faq.png')} alt='' />
+                            <img className='h-[250px] max-md:h-[200px]' src={require('../images/faq.webp')} alt='' />
                         </div>
 
 

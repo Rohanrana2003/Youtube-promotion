@@ -113,7 +113,7 @@ const Auth = ({ onAuthSuccess }) => {
 
       {/* Background Image */}
       <div className='fixed top-0 h-[100vh] -z-20'>
-        <img className='h-screen w-screen object-cover ' src={require('../images/background.jpg')} alt='bg' />
+        <img className='h-screen w-screen object-cover ' src={require('../images/background.webp')} alt='bg' />
       </div>
       <div className="flex justify-center max-lg:flex-col items-center gap-28 max-md:gap-16">
 

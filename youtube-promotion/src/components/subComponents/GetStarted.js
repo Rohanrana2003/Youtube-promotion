@@ -25,7 +25,7 @@ const GetStarted = ({ redirectToAuth }) => {
             <h1 className=' mb-7 text-[42px] max-sm:text-[36px] mx-5 text-zinc-800 font-semibold text-center'>Achieve your goals with
                 <a href='https://www.younedia.com/' target='_blank' rel='noreferrer'>
                     <span className='relative text-[#D88B0F] z-10 font-bold hover:text-zinc-800 transition-all duration-150'> YOUNEDIA
-                        <img className='absolute -right-2 -bottom-3' src={require('../../images/underline-black.png')} alt='' />
+                        <img className='absolute -right-2 -bottom-3' src={require('../../images/underline-black.webp')} alt='' />
                     </span>
                 </a>
             </h1>

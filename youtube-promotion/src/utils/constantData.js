@@ -34,27 +34,27 @@ export const SummarizeData = [
   {
     id: 1,
     desc: 'YouNedia is a Trusted partner',
-    img: require('../images/main-trust.png')
+    img: require('../images/main-trust.webp')
   }, {
     id: 2,
     desc: 'YouTube Channel promotion only on YouTube',
-    img: require('../images/main-monitor.png')
+    img: require('../images/main-monitor.webp')
   }, {
     id: 3,
     desc: 'We show your video to your target audience',
-    img: require('../images/main-target.png')
+    img: require('../images/main-target.webp')
   }, {
     id: 4,
     desc: 'There are no bots or low-quality views',
-    img: require('../images/main-authentic.png')
+    img: require('../images/main-authentic.webp')
   }, {
     id: 5,
     desc: 'Start from as little as $49 per week',
-    img: require('../images/main-wallet.png')
+    img: require('../images/main-wallet.webp')
   }, {
     id: 6,
     desc: 'Customer Support available 24/7',
-    img: require('../images/main-support.png')
+    img: require('../images/main-support.webp')
   }
 ]
 

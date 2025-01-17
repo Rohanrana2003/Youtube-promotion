@@ -15,7 +15,7 @@ const Contact = ({ redirectToAuth }) => {
                 <h2 className="max-md:text-3xl max-md:mt-10 max-md:px-10 text-5xl text-center font-bold text-zinc-800 leading-[3.25rem]">
                     Contact us
                 </h2>
-                <img className='h-64 max-md:h-40 object-cover max-md:my-5' src={require('../images/contact-main.png')} alt='' />
+                <img className='h-64 max-md:h-40 object-cover max-md:my-5' src={require('../images/contact-main.webp')} alt='' />
             </section>
 
 

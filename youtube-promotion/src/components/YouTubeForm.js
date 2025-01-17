@@ -167,7 +167,7 @@ const CombinedForm = ({ user }) => {
 
       {/* Background Image  */}
       <div className="top-0 fixed h-[100vh]  -z-20">
-        <img className='h-screen w-screen after:absolute after:content-[""] after:w-[100vw] after:h-[100vh] after:bg-black object-cover' src={require('../images/youtube-background.jpg')} alt='bg' />
+        <img className='h-screen w-screen after:absolute after:content-[""] after:w-[100vw] after:h-[100vh] after:bg-black object-cover' src={require('../images/youtube-background.webp')} alt='bg' />
       </div>
 
       {/* Form area */}
@@ -175,7 +175,7 @@ const CombinedForm = ({ user }) => {
         <h1 className="text-4xl max-md:text-2xl  font-semibold text-center mb-6">
           Start Your <span className="text-[#D88B0F]">Promotion</span>
         </h1>
-        <img className="absolute mt-[13px] ml-[12px] h-8 max-sm:h-6 flex z-10 items-center " src={require('../images/youtube.png')} alt="youtube" />
+        <img className="absolute mt-[13px] ml-[12px] h-8 max-sm:h-6 flex z-10 items-center " src={require('../images/youtube.webp')} alt="youtube" />
 
         <input
           type="text"

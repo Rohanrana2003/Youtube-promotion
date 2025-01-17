@@ -19,7 +19,7 @@ const Main = ({ redirectToAuth }) => {
                 <div className='fixed top-0 h-full object-cover w-screen  bg-black opacity-55 -z-10' ></div>
 
                 {/* Background Image  */}
-                    <img className='top-0 fixed object-center h-[100vh] w-screen -z-20 after:absolute after:content-[""] after:w-[100vw] after:h-[100vh] after:bg-black object-cover' src={require('../images/background.jpg')} alt='bg' />
+                    <img className='top-0 fixed object-center h-[100vh] w-screen -z-20 after:absolute after:content-[""] after:w-[100vw] after:h-[100vh] after:bg-black object-cover' src={require('../images/background.webp')} alt='bg' />
 
                 <div className="flex items-center justify-center flex-col">
 
@@ -27,7 +27,7 @@ const Main = ({ redirectToAuth }) => {
                         <h1 className="max-md:text-[26px] text-3xl max-md:my-10 px-4 my-4 mb-7 md:mb-14 text-white text-center">YouTube Promotions With  
                         <a href='https://www.younedia.com/' target='_blank' rel='noreferrer'>
                             <span className='relative text-[#D88B0F] z-10  hover:text-white transition-all duration-150'> YOUNEDIA
-                                <img className='absolute -right-[6px]' src={require('../images/underline-black.png')} alt='' />
+                                <img className='absolute -right-[6px]' src={require('../images/underline-black.webp')} alt='' />
                             </span></a>
                         </h1>
 
@@ -39,7 +39,7 @@ const Main = ({ redirectToAuth }) => {
 
                     <button onClick={redirectToAuth}
                         className=' flex group items-center gap-3 pr-10 bg-[#c47e0e] hover:bg-opacity-85 max-md:text-xl text-2xl font-medium text-[#f3f3f3] max-md:py-[9px] py-[13px] max-md:px-[15px] px-[30px] rounded-[5px] shadow-md shadow-black hover:shadow-none '>Start Promotion 
-                        <img className='max-md:w-[25px] w-[33px] group-hover:translate-x-5 transition duration-500' src={require('../images/rightArrow.png')} alt='' /></button>
+                        <img className='max-md:w-[25px] w-[33px] group-hover:translate-x-5 transition duration-500' src={require('../images/rightArrow.webp')} alt='' /></button>
 
                 </div>
 
