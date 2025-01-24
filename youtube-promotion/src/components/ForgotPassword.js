@@ -30,7 +30,7 @@ const ForgotPassword = () => {
     }
 
     return (
-        <div className=' flex items-center justify-center w-full'>
+        <div className=' flex items-center justify-center w-full min-h-[100vh]'>
 
          {/* Black transparent Background  */}
          <div className='fixed top-0 h-full object-cover w-screen  bg-black opacity-20 -z-10' ></div>
@@ -40,7 +40,7 @@ const ForgotPassword = () => {
 
             <div className='lg:-ml-20  pt-28 p-6 rounded-3xl flex lg:gap-32 max-lg:flex-col items-center justify-center'>
 
-                <img className='w-[250px] lg:w-[480px] md:w-[400px] max-lg:mx-auto max-lg:flex' src={require('../images/forgotPassword.webp')} alt='forgotPassword' />
+                <img className='w-[250px] lg:w-[480px] md:w-[400px] max-lg:mx-auto max-lg:hidden' src={require('../images/forgotPassword.webp')} alt='forgotPassword' />
 
                 <div className='text-center h-[370px]'>
                     <h1 className='font-bold text-5xl max-lg:text-4xl max-sm:text-[28px] mt-10 mb-2 text-white'>Forgot <span className='text-[#D88B0F]'>Password</span> </h1>

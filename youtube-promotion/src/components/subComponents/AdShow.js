@@ -9,8 +9,8 @@ const AdShow = () => {
                 </h1>
 
             <div className='flex items-center max-md:flex-col gap-5 xl:gap-20'>
-                <img className='max-md:h-40 h-56 lg:h-80  rounded-lg' src={require('../../images/youtube-ad1.webp')} alt='' />
-                <img className='max-md:h-44 h-48 lg:h-[270px] rounded-lg' src={require('../../images/youtube-ad2.webp')} alt='' />
+                <img className='max-md:h-40 h-56 lg:h-80 shadow-lg shadow-black  rounded-lg' src={require('../../images/youtube-ad1.webp')} alt='' />
+                <img className='max-md:h-44 h-48 lg:h-[270px] shadow-lg shadow-black rounded-lg' src={require('../../images/youtube-ad2.webp')} alt='' />
             </div>
         </div>
     )
