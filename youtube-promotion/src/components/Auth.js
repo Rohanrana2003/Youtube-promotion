@@ -105,7 +105,7 @@ const Auth = ({ onAuthSuccess }) => {
   }
 
   return (
-    <div className=" pt-24 flex justify-center pb-20 z-50">
+    <div className=" pt-24 flex justify-center pb-20 z-50 min-h-screen">
 
       {/* Black transparent Background  */}
       <div className='fixed top-0 h-screen object-cover w-[100%]  bg-black opacity-45 -z-10' ></div>
