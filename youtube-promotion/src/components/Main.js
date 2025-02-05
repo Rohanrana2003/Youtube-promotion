@@ -11,7 +11,7 @@ const Main = ({ redirectToAuth }) => {
     }, []) 
 
     return (
-        <div className=" pt-20 z-50 w-full">
+        <div className="md:pt-16 max-md:py-8 pt-20 z-50 w-full">
 
             <section className=' w-full flex flex-col justify-center items-center min-h-screen pb-20'>
 

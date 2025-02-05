@@ -108,7 +108,7 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
         </div>
 
         {/* Header buttons */}
-        <div className='flex md:gap-8 mt-[5px] max-md:hidden'>
+        <div className='flex md:gap-8 mt-[5px] max-lg:hidden'>
           {dropdownItems.map((item) => (
             <button
               key={item.id}
@@ -122,19 +122,19 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
       </div>
 
       {/* Mobile Side bar */}
-      <div className={`absolute top-0 left-0 flex flex-col  mt-[5px] bg-[#18181B] h-screen w-[300px] md:hidden ${showMenu ? 'hidden' : 'close'}`}>
+      <div className={`absolute top-0 left-0 flex flex-col  mt-[5px] bg-[#18181B] h-screen w-[300px] lg:hidden ${showMenu ? 'hidden' : 'close'}`}>
         <img src={logo} alt="Logo" className="h-32 w-32 m-5 mb-10 cursor-pointer" />
         {dropdownItems.map((item) => (
           <button
             key={item.id}
             onClick={() => handleButtonClick(item)}
-            className={`bg-slate-900 my-2 py-3 text-lg  ${selectedItem === item.id ? "text-[#DB880F]" : "text-white"}`}
+            className={`bg-gray-950 my-2 py-3 text-lg  ${selectedItem === item.id ? "text-[#DB880F]" : "text-white"}`}
           >
             {item.label}
           </button>
         ))}
         {/* Copyright Section */}
-        <div className="mt-8 flex w-full justify-center gap-2 items-center absolute bottom-20 -left-5">
+        <div className="absolute mt-8 flex w-full justify-start gap-2 items-center text-[13px] bottom-16 left-5">
           <img className='h-10' src={require('../images/younedia.png')} alt='younedia' />
           <span>&copy; {new Date().getFullYear()} YOUNEDIA <br />All Rights Reserved.</span>
         </div>
@@ -145,14 +145,14 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
       {
         !user && showButton && showHeader &&
         <button onClick={handleLogin}
-          className=' bg-[#D88B0F] max-md:hidden font-bold text-[21px] transition-all ease-in duration-100 hover:scale-[.96] absolute right-7 top-4  px-7 py-1  hover:shadow-none  shadow-black shadow-custom text-[#27272A]'>
+          className=' bg-[#D88B0F] max-lg:hidden font-bold text-[21px] transition-all ease-in duration-100 hover:scale-[.96] absolute right-7 top-4  px-7 py-1  hover:shadow-none  shadow-black shadow-custom text-[#27272A]'>
           Login</button>
       }
 
       {/* Hamburger Button */}
       {!user && <div>
-        {showMenu ? <img className='w-7 absolute right-8 top-5 cursor-pointer md:hidden' onClick={() => setShowMenu(false)} src={require('../images/menu-open.png')} alt='' />
-          : <img className='w-5 absolute right-8 top-6 cursor-pointer md:hidden' onClick={() => setShowMenu(true)} src={require('../images/menu-close.png')} alt='' />}
+        {showMenu ? <img className='w-7 absolute right-8 top-5 cursor-pointer lg:hidden' onClick={() => setShowMenu(false)} src={require('../images/menu-open.png')} alt='' />
+          : <img className='w-5 absolute right-8 top-6 cursor-pointer lg:hidden' onClick={() => setShowMenu(true)} src={require('../images/menu-close.png')} alt='' />}
       </div>}
 
       {/* Form page Drop-down */}
@@ -160,7 +160,7 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
         {user ? (
           <div className="flex items-center " onMouseOver={() => setIsOpen(true)} onClick={() => setIsOpen(!isOpen)} onMouseLeave={() => setIsOpen(false)}>
 
-            <div className={`relative border shadow-black shadow p-2 rounded-lg pr-0 cursor-pointer ${!isOpen ? 'border-gray-500' : 'border-[#D88B0F]'} `}>
+            <div className={`relative border shadow-black shadow p-2 rounded-lg pr-0 transition-all duration-300 cursor-pointer ${!isOpen ? 'border-gray-500' : 'border-[#D88B0F]'} `}>
               <div className='flex gap-2 mr-3 items-center' >
                 {!user.photoURL ?
                   (<img
@@ -175,7 +175,7 @@ const Header = ({ user, onSignOut, setUser, showButton, setShowButton, redirectT
                       className="w-7 h-7 max-md:w-6 max-md:h-6 rounded-full ml-2 max-md:ml-1"
                     />
                   )}
-                <span className='font-medium text-lg max-md:text-base mr-1 max-md:mr-0 mt-[2px]'>{user.displayName || 'User'}</span>
+                <span className='font-medium text-lg max-md:text-base mr-1 max-md:mr-0 mt-[2px]'>{ user?.displayName?.length<=10?  user?.displayName: user?.displayName?.split(' ')[0] || 'User'}</span>
                 <img className='h-[8px] max-md:h-[7px] mt-1 mr-1 max-md:mr-0' src={require('../images/down-arrow.png')} alt='' />
               </div>
               {
