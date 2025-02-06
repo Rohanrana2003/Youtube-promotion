@@ -135,7 +135,7 @@ const Auth = ({ onAuthSuccess }) => {
                 placeholder=""
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="block max-sm:text-sm focus:outline-none transition-all duration-300 focus:shadow-[#D88B0F] focus:shadow-custom  w-full p-[10px] pl-[14px] max-sm:py-3 mb-[14px] text-white font- rounded focus:bg-opacity-100 bg-opacity-70 bg-[#000] "
+                className="block max-sm:text-sm outline-none transition-all duration-300 focus:shadow-[#D88B0F] focus:shadow-custom  w-full p-[10px] pl-[14px] max-sm:py-3 mb-[14px] text-white font-light rounded focus:bg-opacity-100 bg-opacity-70 bg-[#000] "
               />
               <label htmlFor="text" >Name</label>
             </div>
@@ -147,7 +147,7 @@ const Auth = ({ onAuthSuccess }) => {
               placeholder=""
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="block  max-sm:text-sm focus:outline-none transition-all duration-300 focus:shadow-[#D88B0F] focus:shadow-custom   w-full p-[10px] pl-[14px] max-sm:py-3 mb-[14px] text-white font- rounded focus:bg-opacity-100 bg-opacity-70 bg-[#000] "
+              className="block  max-sm:text-sm outline-none transition-all duration-300 focus:shadow-[#D88B0F] focus:shadow-custom    w-full p-[10px] pl-[14px] max-sm:py-3 mb-[14px] text-white font-light rounded focus:bg-opacity-100 bg-opacity-70 bg-[#000] "
             />
             <label htmlFor="text" >Email</label>
           </div>
@@ -159,7 +159,7 @@ const Auth = ({ onAuthSuccess }) => {
               placeholder=""
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="block max-sm:text-sm p-[10px] w-full mb-1 pl-[14px] max-sm:py-3 transition-all duration-300 focus:outline-none focus:shadow-[#D88B0F] focus:shadow-custom text-white font-  rounded focus:bg-opacity-100 bg-opacity-70 bg-[#000] "
+              className="block max-sm:text-sm p-[10px] w-full mb-1 pl-[14px] max-sm:py-3 transition-all duration-300 outline-none focus:shadow-[#D88B0F] focus:shadow-custom text-white font-light  rounded focus:bg-opacity-100 bg-opacity-70 bg-[#000] "
             />
             <label htmlFor="password">Password</label>
           </div>
