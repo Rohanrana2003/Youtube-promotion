@@ -15,7 +15,7 @@ git commit -m "Remove .env file and add to .gitignore"
 # production
 /build
 
-build.zip
+/build.zip
 
 # misc
 .DS_Store

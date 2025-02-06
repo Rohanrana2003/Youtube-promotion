@@ -128,28 +128,41 @@ const Auth = ({ onAuthSuccess }) => {
           <h1 className="text-[30px] max-sm:text-[25px] w-full -ml-2 text-center after:flex after:mx-auto after:w-[100%] after:-mr-[7px] after:bg-slate-700 after:h-p font-semibold mb-4 text-slate-100">{isSignUp ? 'Sign Up' : 'Log In'}</h1>
           {isSignUp
             &&
+            <div className='relative'>
+              <input
+                id='text'
+                type="text"
+                placeholder=""
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="block max-sm:text-sm focus:outline-none transition-all duration-300 focus:shadow-[#D88B0F] focus:shadow-custom  w-full p-[10px] pl-[14px] max-sm:py-3 mb-[14px] text-white font- rounded focus:bg-opacity-100 bg-opacity-70 bg-[#000] "
+              />
+              <label htmlFor="text" >Name</label>
+            </div>
+          }
+          <div className='relative'>
             <input
               type="text"
-              placeholder="Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="block max-sm:text-sm focus:outline-none transition-all duration-300 focus:shadow-[#D88B0F] focus:shadow-custom  w-full p-[10px] pl-[14px] max-sm:py-3 mb-2 text-white rounded focus:bg-opacity-100 bg-opacity-70 bg-[#000] "
+              id='text'
+              placeholder=""
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="block  max-sm:text-sm focus:outline-none transition-all duration-300 focus:shadow-[#D88B0F] focus:shadow-custom   w-full p-[10px] pl-[14px] max-sm:py-3 mb-[14px] text-white font- rounded focus:bg-opacity-100 bg-opacity-70 bg-[#000] "
             />
-          }
-          <input
-            type="text"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="block max-sm:text-sm focus:outline-none transition-all duration-300 focus:shadow-[#D88B0F] focus:shadow-custom   w-full p-[10px] pl-[14px] max-sm:py-3 mb-2 text-white rounded focus:bg-opacity-100 bg-opacity-70 bg-[#000] "
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="block max-sm:text-sm p-[10px] w-full mb-1 pl-[14px] max-sm:py-3 transition-all duration-300 focus:outline-none focus:shadow-[#D88B0F] focus:shadow-custom text-white  rounded focus:bg-opacity-100 bg-opacity-70 bg-[#000] "
-          />
+            <label htmlFor="text" >Email</label>
+          </div>
+
+          <div className='relative'>
+            <input
+              id='password'
+              type="password"
+              placeholder=""
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="block max-sm:text-sm p-[10px] w-full mb-1 pl-[14px] max-sm:py-3 transition-all duration-300 focus:outline-none focus:shadow-[#D88B0F] focus:shadow-custom text-white font-  rounded focus:bg-opacity-100 bg-opacity-70 bg-[#000] "
+            />
+            <label htmlFor="password">Password</label>
+          </div>
           {
             error ?
               <div className=' flex items-center mb-3 mt-[2px] ml-1'>
@@ -158,7 +171,7 @@ const Auth = ({ onAuthSuccess }) => {
               :
               <p className='mb-3'></p>
           }
-          <button type="submit" 
+          <button type="submit"
             className="bg-[#D88B0F] hover:opacity-85 max-sm:text-[15px]  text-white font-medium py-2 px-4 rounded w-full">
             {isSignUp ? 'Sign Up' : 'Login'}
           </button>
