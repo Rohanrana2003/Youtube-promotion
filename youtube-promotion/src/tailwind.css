@@ -27,7 +27,7 @@ body{
   font-family: 'Roboto';
   }
 
-label{
+.auth-label{
   position: absolute;
   left: 10px;
   top: 10px;
@@ -38,8 +38,8 @@ label{
   border-radius: 2px;
 }
 
-input:focus + label,
-input:not(:placeholder-shown) + label {
+input:focus + .auth-label,
+input:not(:placeholder-shown) + .auth-label {
   transform: translateY(-20px);
   background: #000;
   color: #D88B0F;

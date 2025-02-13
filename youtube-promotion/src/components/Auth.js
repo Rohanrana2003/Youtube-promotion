@@ -137,7 +137,7 @@ const Auth = ({ onAuthSuccess }) => {
                 onChange={(e) => setName(e.target.value)}
                 className="block max-sm:text-sm outline-none transition-all duration-300 focus:shadow-[#D88B0F] focus:shadow-custom  w-full p-[10px] pl-[14px] max-sm:py-3 mb-[14px] text-white font-light rounded focus:bg-opacity-100 bg-opacity-70 bg-[#000] "
               />
-              <label htmlFor="text" >Name</label>
+              <label className='auth-label' htmlFor="text" >Name</label>
             </div>
           }
           <div className='relative'>
@@ -149,10 +149,10 @@ const Auth = ({ onAuthSuccess }) => {
               onChange={(e) => setEmail(e.target.value)}
               className="block  max-sm:text-sm outline-none transition-all duration-300 focus:shadow-[#D88B0F] focus:shadow-custom    w-full p-[10px] pl-[14px] max-sm:py-3 mb-[14px] text-white font-light rounded focus:bg-opacity-100 bg-opacity-70 bg-[#000] "
             />
-            <label htmlFor="text" >Email</label>
+            <label className='auth-label' htmlFor="text" >Email</label>
           </div>
 
-          <div className='relative'>
+          <div className='relative'>  
             <input
               id='password'
               type="password"
@@ -161,7 +161,7 @@ const Auth = ({ onAuthSuccess }) => {
               onChange={(e) => setPassword(e.target.value)}
               className="block max-sm:text-sm p-[10px] w-full mb-1 pl-[14px] max-sm:py-3 transition-all duration-300 outline-none focus:shadow-[#D88B0F] focus:shadow-custom text-white font-light  rounded focus:bg-opacity-100 bg-opacity-70 bg-[#000] "
             />
-            <label htmlFor="password">Password</label>
+            <label className='auth-label' htmlFor="password">Password</label>
           </div>
           {
             error ?
